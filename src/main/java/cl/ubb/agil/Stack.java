@@ -29,4 +29,8 @@ public class Stack{
 		pila[ultimo] = i;
 	}
 
+	public int getSize() {
+		return 0;
+	}
+
 }

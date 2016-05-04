@@ -40,5 +40,18 @@ public class StackTest {
 		
 		assertFalse(resultado);
 	}
+	
+	@Test
+	public void agregarNumeroUnoYDosTamanioStack2(){
+		
+		Stack stack = new Stack(2);
+		
+		stack.push(1);
+		stack.push(2);
+		
+		int resultado = stack.getSize();
+		
+		assertEquals(2, resultado);
+	}
 
 }
