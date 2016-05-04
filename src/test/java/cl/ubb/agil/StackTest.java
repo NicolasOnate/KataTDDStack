@@ -15,5 +15,17 @@ public class StackTest {
 		
 		assertTrue(resultado);	
 	}
+	
+	@Test
+	public void agregarNumeroUnoStackNoVacio(){
+		
+		Stack stack = new Stack();
+		
+		stack.push(1);
+		
+		boolean resultado = stack.isEmpty();
+		
+		assertFalse(resultado);
+	}
 
 }
