@@ -65,5 +65,18 @@ public class StackTest {
 		
 		assertEquals(1, resultado);
 	}
+	
+	@Test
+	public void hacerPopStackDevuelveNumeroDos(){
+		
+		Stack stack = new Stack(2);
+		
+		stack.push(1);
+		stack.push(2);
+		
+		int resultado = stack.pop();
+		
+		assertEquals(2, resultado);
+	}
 
 }
