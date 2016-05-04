@@ -39,4 +39,8 @@ public class Stack{
 		return num;
 	}
 
+	public long top() {
+		return 1;
+	}
+
 }

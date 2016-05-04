@@ -2,14 +2,20 @@ package cl.ubb.agil;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class StackTest {
+	
+	private Stack stack;
+	
+	@Before
+	public void setup(){
+		stack = new Stack(2);
+	}
 
 	@Test
 	public void stackParteVacia() {
-		
-		Stack stack = new Stack(2);
 		
 		boolean resultado = stack.isEmpty();
 		
@@ -19,7 +25,6 @@ public class StackTest {
 	@Test
 	public void agregarNumeroUnoStackNoVacio(){
 		
-		Stack stack = new Stack(2);
 		
 		stack.push(1);
 		
@@ -31,7 +36,6 @@ public class StackTest {
 	@Test
 	public void agregarNumeroUnoYDosStackNoVacio(){
 		
-		Stack stack = new Stack(2);
 		
 		stack.push(1);
 		stack.push(2);
@@ -44,8 +48,6 @@ public class StackTest {
 	@Test
 	public void agregarNumeroUnoYDosTamanioStack2(){
 		
-		Stack stack = new Stack(2);
-		
 		stack.push(1);
 		stack.push(2);
 		
@@ -57,8 +59,6 @@ public class StackTest {
 	@Test
 	public void agregarNumeroUnoYhacerPop(){
 		
-		Stack stack = new Stack(2);
-		
 		stack.push(1);
 		
 		long resultado = stack.pop();
@@ -68,8 +68,6 @@ public class StackTest {
 	
 	@Test
 	public void hacerPopStackDevuelveNumeroDos(){
-		
-		Stack stack = new Stack(2);
 		
 		stack.push(1);
 		stack.push(2);
@@ -81,8 +79,6 @@ public class StackTest {
 	
 	@Test
 	public void hacerPopDosVecesDevuelveCuatroYTres(){
-		
-		Stack stack = new Stack(2);
 		
 		stack.push(3);
 		stack.push(4);
@@ -97,18 +93,26 @@ public class StackTest {
 	
 	@Test(expected = ArrayIndexOutOfBoundsException.class)
 	public void hacerPopEnUnStackVacioLanzaError() throws ArrayIndexOutOfBoundsException{
-		
-		Stack stack = new Stack(2);
-		
+
 		long resultado = stack.pop();
 	}
 	
 	@Test(expected = ArrayIndexOutOfBoundsException.class)
 	public void hacerPushAUnStackLleno() throws ArrayIndexOutOfBoundsException{
-		Stack stack = new Stack(1);
 		
 		stack.push(1);
 		stack.push(2);
+		stack.push(3);
+	}
+	
+	@Test
+	public void topDevuelveUno(){
+		
+		stack.push(1);
+		long resultado = stack.top();
+		
+		
+		assertEquals(1, resultado);
 	}
 
 }
