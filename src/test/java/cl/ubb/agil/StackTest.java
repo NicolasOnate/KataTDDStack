@@ -102,5 +102,13 @@ public class StackTest {
 		
 		long resultado = stack.pop();
 	}
+	
+	@Test(expected = ArrayIndexOutOfBoundsException.class)
+	public void hacerPushAUnStackLleno() throws ArrayIndexOutOfBoundsException{
+		Stack stack = new Stack(1);
+		
+		stack.push(1);
+		stack.push(2);
+	}
 
 }
