@@ -94,5 +94,13 @@ public class StackTest {
 		assertEquals(3, resultado);
 		
 	}
+	
+	@Test(expected = ArrayIndexOutOfBoundsException.class)
+	public void hacerPopEnUnStackVacioLanzaError() throws ArrayIndexOutOfBoundsException{
+		
+		Stack stack = new Stack(2);
+		
+		long resultado = stack.pop();
+	}
 
 }
