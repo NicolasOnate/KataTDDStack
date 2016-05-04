@@ -33,11 +33,10 @@ public class Stack{
 		return 2;
 	}
 
-	public int pop() {
-		if(pila[ultimo] == 1)
-			return 1;
-		else
-			return 2;
+	public long pop() {
+		long num = pila[ultimo];
+		ultimo--;
+		return num;
 	}
 
 }
