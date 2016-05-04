@@ -9,7 +9,7 @@ public class StackTest {
 	@Test
 	public void stackParteVacia() {
 		
-		Stack stack = new Stack();
+		Stack stack = new Stack(2);
 		
 		boolean resultado = stack.isEmpty();
 		
@@ -19,9 +19,22 @@ public class StackTest {
 	@Test
 	public void agregarNumeroUnoStackNoVacio(){
 		
-		Stack stack = new Stack();
+		Stack stack = new Stack(2);
 		
 		stack.push(1);
+		
+		boolean resultado = stack.isEmpty();
+		
+		assertFalse(resultado);
+	}
+	
+	@Test
+	public void agregarNumeroUnoYDosStackNoVacio(){
+		
+		Stack stack = new Stack(2);
+		
+		stack.push(1);
+		stack.push(2);
 		
 		boolean resultado = stack.isEmpty();
 		

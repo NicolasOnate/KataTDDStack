@@ -3,10 +3,12 @@ package cl.ubb.agil;
 
 public class Stack{
 
+	private long[] pila;
 	private int ultimo;
 	
-	public Stack(){
+	public Stack(int tamanio){
 		
+		pila = new long[tamanio];
 		ultimo = -1;
 	}
 	
@@ -14,16 +16,17 @@ public class Stack{
 	 * Verifica si la pila esta vacia
 	 */
 	public boolean isEmpty() {
-		if (ultimo == 1)
-			return false;
-		return true;
+		if (ultimo == -1)
+			return true;
+		return false;
 	}
 
 	/*
 	 * Añade un elemento a la pila
 	 */
 	public void push(int i) {
-		ultimo = 1;
+		ultimo++;
+		pila[ultimo] = i;
 	}
 
 }
