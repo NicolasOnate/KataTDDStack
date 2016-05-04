@@ -33,4 +33,8 @@ public class Stack{
 		return 2;
 	}
 
+	public int pop() {
+		return 1;
+	}
+
 }

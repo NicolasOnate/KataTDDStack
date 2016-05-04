@@ -53,5 +53,17 @@ public class StackTest {
 		
 		assertEquals(2, resultado);
 	}
+	
+	@Test
+	public void agregarNumeroUnoYhacerPop(){
+		
+		Stack stack = new Stack(2);
+		
+		stack.push(1);
+		
+		int resultado = stack.pop();
+		
+		assertEquals(1, resultado);
+	}
 
 }
