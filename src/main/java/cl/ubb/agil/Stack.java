@@ -40,7 +40,7 @@ public class Stack{
 	}
 
 	public long top() {
-		return 1;
+		return pila[ultimo];
 	}
 
 }

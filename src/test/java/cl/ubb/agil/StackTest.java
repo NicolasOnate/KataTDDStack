@@ -114,5 +114,16 @@ public class StackTest {
 		
 		assertEquals(1, resultado);
 	}
+	
+	@Test
+	public void topDevuelveDos(){
+		
+		stack.push(1);
+		stack.push(2);
+		
+		long resultado = stack.top();
+		
+		assertEquals(2, resultado);
+	}
 
 }
